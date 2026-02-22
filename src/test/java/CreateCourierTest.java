@@ -1,10 +1,8 @@
 import io.qameta.allure.Step;
 import model.CourierModel;
-import org.junit.After;
 import org.junit.Test;
 
 import static data.TestData.*;
-import static io.restassured.RestAssured.given;
 import static java.net.HttpURLConnection.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static steps.CourierSteps.createCourier;
@@ -33,9 +31,9 @@ public class CreateCourierTest extends BaseApiTest {
     @Test
     public void testCreateDuplicateCourierError() {
         CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
-        createCourier(courier); // Первый запрос должен пройти успешно
+        createCourier(courier);
 
-        // Второй запрос с теми же данными должен вернуть ошибку
+
         createCourier(courier)
                 .then()
                 .log().all()
@@ -46,7 +44,7 @@ public class CreateCourierTest extends BaseApiTest {
     @Step("CreateCourierWithMissingLogin")
     @Test
     public void testCreateCourierWithMissingLoginError() {
-        // Создаём курьера без поля firstName
+
         CourierModel courierWithoutLogin = new CourierModel(null, PASSWORD, FIRSTNAME);
 
         createCourier(courierWithoutLogin)
@@ -59,7 +57,7 @@ public class CreateCourierTest extends BaseApiTest {
     @Step("CreateCourierWithMissingPassword")
     @Test
     public void testCreateCourierWithMissingPasswordError() {
-        // Создаём курьера без поля firstName
+
         CourierModel courierWithoutPassword = new CourierModel(LOGIN, null, FIRSTNAME);
 
         createCourier(courierWithoutPassword)
@@ -72,7 +70,7 @@ public class CreateCourierTest extends BaseApiTest {
     @Step("CreateCourierWithMissingFirstname")
     @Test
     public void testCreateCourierWithMissingFirstnameError() {
-        // Создаём курьера без поля firstName
+
         CourierModel courierWithoutFirstname = new CourierModel(LOGIN, PASSWORD, null);
 
         createCourier(courierWithoutFirstname)

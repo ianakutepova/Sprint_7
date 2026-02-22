@@ -34,7 +34,7 @@ public class LoginCourierTest extends BaseApiTest {
     @Step("LoginCourierWithMissingFields")
     @Test
     public void testLoginCourierWithMissingFieldsError() {
-        // Попытка авторизации без логина
+
         given()
                 .body("{\"password\": \"" + PASSWORD + "\"}")
                 .when()
@@ -44,7 +44,7 @@ public class LoginCourierTest extends BaseApiTest {
                 .statusCode(HTTP_BAD_REQUEST)
                 .body("message", equalTo("Недостаточно данных для входа"));
 
-        // Попытка авторизации без пароля
+
         given()
                 .body("{\"login\": \"" + LOGIN + "\"}")
                 .when()
@@ -58,7 +58,7 @@ public class LoginCourierTest extends BaseApiTest {
     @Step("LoginCourierWithIncorrectCredentials")
     @Test
     public void testLoginCourierWithIncorrectCredentialsError() {
-        // Попытка авторизации с неправильными данными
+
         given()
                 .body(String.format("{\"login\": \"%s\", \"password\": \"%s\"}", INCORRECT_LOGIN, INCORRECT_PASSWORD))
                 .when()
@@ -74,7 +74,7 @@ public class LoginCourierTest extends BaseApiTest {
     public void testLoginNonExistingUserError() {
         String randomLogin = TestData.NON_EXISTING_LOGIN;
         String randomPassword = TestData.NON_EXISTING_PASSWORD;
-        // Попытка авторизации под несуществующим пользователем
+
         given()
                 .body(String.format("{\"login\": \"%s\", \"password\": \"%s\"}", randomLogin, randomPassword))
                 .when()

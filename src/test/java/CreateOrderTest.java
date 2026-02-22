@@ -9,7 +9,6 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static steps.OrderSteps.createOrder;
 
@@ -70,7 +69,7 @@ public class CreateOrderTest extends BaseApiTest {
 
         String track = response.jsonPath().get("track");
 
-        // Отменяем заказ
+
         OrderCancellationSteps.cancelOrder(track)
                 .then()
                 .log().all()
