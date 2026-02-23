@@ -1,0 +1,141 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "1 expectation failed.\nExpected status code <201> but was <409>.\n",
+      "children" : [ {
+        "name" : "testCreateCourierWithMissingFirstnameError",
+        "uid" : "1acab0b6c7e331ad",
+        "parentUid" : "07f4658270409c8315fffb5e27778143",
+        "status" : "failed",
+        "time" : {
+          "start" : 1771873921926,
+          "stop" : 1771873922218,
+          "duration" : 292
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "07f4658270409c8315fffb5e27778143"
+    }, {
+      "name" : "1 expectation failed.\nJSON path orders doesn't match.\nExpected: map containing [\"id\"->ANYTHING]\n  Actual: <[{id=631584, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=303251, color=null, comment=null, createdAt=2026-02-19T18:28:55.562Z, updatedAt=2026-02-19T18:28:55.562Z, status=0}, {id=619074, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=320578, color=null, comment=null, createdAt=2026-02-03T07:39:03.700Z, updatedAt=2026-02-03T07:39:03.700Z, status=0}, {id=619092, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=781786, color=null, comment=null, createdAt=2026-02-03T08:00:10.366Z, updatedAt=2026-02-03T08:00:10.366Z, status=0}, {id=619117, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=23188, color=null, comment=null, createdAt=2026-02-03T09:28:29.380Z, updatedAt=2026-02-03T09:28:29.380Z, status=0}, {id=619118, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=981729, color=null, comment=null, createdAt=2026-02-03T09:28:30.415Z, updatedAt=2026-02-03T09:28:30.415Z, status=0}, {id=619119, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=654485, color=null, comment=null, createdAt=2026-02-03T09:28:32.562Z, updatedAt=2026-02-03T09:28:32.562Z, status=0}, {id=619120, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=202209, color=null, comment=null, createdAt=2026-02-03T09:28:33.687Z, updatedAt=2026-02-03T09:28:33.687Z, status=0}, {id=619121, courierId=null, firstName=null, lastName=null, address=null, metroStation=null, phone=null, rentTime=null, deliveryDate=null, track=865610, color=null, comment=null, createdAt=2026-02-03T09:28:35.844Z, updatedAt=2026-02-03T09:28:35.844Z, status=0}, {id=617428, courierId=null, firstName=Naruto, lastName=Uchiha, address=Konoha, 142 apt., metroStation=4, phone=+7 800 355 35 35, rentTime=5, deliveryDate=2020-06-06T00:00:00.000Z, track=319166, color=[GREY], comment=Saske, come back to Konoha, createdAt=2026-01-31T12:29:58.265Z, updatedAt=2026-01-31T12:29:58.265Z, status=0}, {id=418591, courierId=null, firstName=Naruto, lastName=Uchiha, address=Konoha, 142 apt., metroStation=109, phone=+7 800 355 35 35, rentTime=5, deliveryDate=2025-03-03T00:00:00.000Z, track=292765, color=[BLACK], comment=Saske, come back to Konoha, createdAt=2025-02-07T13:30:36.914Z, updatedAt=2025-02-07T13:30:36.914Z, status=0}, {id=418568, courierId=null, firstName=Alexandra, lastName=Belikova, address=Lenina, 5, metroStation=5, phone=+7 800 555 55 55, rentTime=1, deliveryDate=2025-05-05T00:00:00.000Z, track=473915, color=[BLACK, GREY], comment=А вообще, я хотела розовый, createdAt=2025-02-07T13:12:34.898Z, updatedAt=2025-02-07T13:12:34.898Z, status=0}, {id=418569, courierId=null, firstName=Alexandra, lastName=Belikova, address=Lenina, 5, metroStation=5, phone=+7 800 555 55 55, rentTime=1, deliveryDate=2025-05-05T00:00:00.000Z, track=534656, color=[], comment=А вообще, я хотела розовый, createdAt=2025-02-07T13:12:35.803Z, updatedAt=2025-02-07T13:12:35.803Z, status=0}, {id=418581, courierId=null, firstName=Alexandra, lastName=Belikova, address=Lenina, 5, metroStation=5, phone=+7 800 555 55 55, rentTime=1, deliveryDate=2025-05-05T00:00:00.000Z, track=367058, color=[BLACK], comment=А вообще, я хотела розовый, createdAt=2025-02-07T13:25:39.898Z, updatedAt=2025-02-07T13:25:39.898Z, status=0}, {id=418582, courierId=null, firstName=Alexandra, lastName=Belikova, address=Lenina, 5, metroStation=5, phone=+7 800 555 55 55, rentTime=1, deliveryDate=2025-05-05T00:00:00.000Z, track=757535, color=[GREY], comment=А вообще, я хотела розовый, createdAt=2025-02-07T13:25:40.794Z, updatedAt=2025-02-07T13:25:40.794Z, status=0}, {id=418583, courierId=null, firstName=Alexandra, lastName=Belikova, address=Lenina, 5, metroStation=5, phone=+7 800 555 55 55, rentTime=1, deliveryDate=2025-05-05T00:00:00.000Z, track=571054, color=[BLACK, GREY], comment=А вообще, я хотела розовый, createdAt=2025-02-07T13:25:41.773Z, updatedAt=2025-02-07T13:25:41.773Z, status=0}, {id=418584, courierId=null, firstName=Alexandra, lastName=Belikova, address=Lenina, 5, metroStation=5, phone=+7 800 555 55 55, rentTime=1, deliveryDate=2025-05-05T00:00:00.000Z, track=651105, color=[], comment=А вообще, я хотела розовый, createdAt=2025-02-07T13:25:43.354Z, updatedAt=2025-02-07T13:25:43.354Z, status=0}, {id=547317, courierId=null, firstName=pkxqvkjipc, lastName=oorolrtunj, address=vlrtsmozzw, metroStation=ndxwvvhhca, phone=veqkdsqkqp, rentTime=10, deliveryDate=2025-09-22T17:29:04.833Z, track=477945, color=[BLACK], comment=hnufmputil, createdAt=2025-09-22T17:29:12.990Z, updatedAt=2025-09-22T17:29:12.990Z, status=0}, {id=547318, courierId=null, firstName=ddzayiblpi, lastName=xkulpnqhea, address=vfjetfumhd, metroStation=xfagiuvsjo, phone=fhufksvagk, rentTime=10, deliveryDate=2025-09-22T17:29:04.833Z, track=969453, color=[GREY], comment=kkigoivcsx, createdAt=2025-09-22T17:29:14.900Z, updatedAt=2025-09-22T17:29:14.900Z, status=0}, {id=547319, courierId=null, firstName=lxsipltwah, lastName=ngbgjqlhek, address=vwiuofpslz, metroStation=pmuubltmmc, phone=onfuuvaepc, rentTime=10, deliveryDate=2025-09-22T17:29:04.833Z, track=111208, color=[BLACK, GREY], comment=zkbdsebyyx, createdAt=2025-09-22T17:29:16.809Z, updatedAt=2025-09-22T17:29:16.809Z, status=0}, {id=573634, courierId=null, firstName=Илья, lastName=Гончаров, address=23423423, metroStation=3, phone=+79772867639, rentTime=2, deliveryDate=2025-10-28T21:00:00.000Z, track=933463, color=[], comment=, createdAt=2025-10-29T17:29:03.606Z, updatedAt=2025-10-29T17:29:03.606Z, status=0}, {id=573632, courierId=null, firstName=иван, lastName=Петров, address=уГРЕШСКАЯ, 25, metroStation=3, phone=+79212030720, rentTime=2, deliveryDate=2025-10-31T21:00:00.000Z, track=377478, color=[BLACK], comment=, createdAt=2025-10-29T17:21:21.175Z, updatedAt=2025-10-29T17:21:21.175Z, status=0}, {id=573633, courierId=null, firstName=Иван, lastName=Петров, address=Угрешская, 25, metroStation=2, phone=+79218040720, rentTime=2, deliveryDate=2025-11-01T21:00:00.000Z, track=577792, color=[BLACK], comment=Hello, createdAt=2025-10-29T17:28:04.691Z, updatedAt=2025-10-29T17:28:04.691Z, status=0}, {id=579111, courierId=null, firstName=Alex, lastName=Kim, address=Kosmicheskaya, 28, metroStation=4, phone=+7 999 999 99 99, rentTime=7, deliveryDate=2025-12-12T00:00:00.000Z, track=792453, color=[BLACK], comment=Hi!, createdAt=2025-11-08T20:48:37.293Z, updatedAt=2025-11-08T20:48:37.293Z, status=0}, {id=616617, courierId=null, firstName=Ахмэд, lastName=Назиров, address=Норильск, Морозная, 25, metroStation=15, phone=+89023470221, rentTime=6, deliveryDate=2026-01-25T21:00:00.000Z, track=147215, color=[GREY], comment=Ждюу, слюшшшай, createdAt=2026-01-30T13:43:51.083Z, updatedAt=2026-01-30T13:43:51.083Z, status=0}, {id=617429, courierId=null, firstName=Влад, lastName=Алекс, address=москв, metroStation=4, phone=89299333333, rentTime=3, deliveryDate=2026-01-31T21:00:00.000Z, track=353885, color=[BLACK], comment=ааа, createdAt=2026-01-31T12:41:24.337Z, updatedAt=2026-01-31T12:41:24.337Z, status=0}, {id=505128, courierId=null, firstName=сВАПВАП, lastName=Свапрар, address=ывапывапр, metroStation=1, phone=79122658935, rentTime=7, deliveryDate=2027-05-28T19:00:00.000Z, track=690216, color=[], comment=вапвыапвп, createdAt=2025-07-13T04:55:05.590Z, updatedAt=2025-07-13T04:55:05.590Z, status=0}, {id=418563, courierId=null, firstName=Mario, lastName=Luigi, address=Mushroom kingdom, metroStation=4, phone=81111111111, rentTime=5, deliveryDate=2110-12-31T21:00:00.000Z, track=394244, color=[GREY], comment=До звонка будильника осталось 4 часа..., createdAt=2025-02-07T13:04:55.481Z, updatedAt=2025-02-07T13:04:55.481Z, status=0}, {id=418564, courierId=null, firstName=Mario, lastName=Luigi, address=Mushroom kingdom, metroStation=4, phone=81111111111, rentTime=5, deliveryDate=2110-12-31T21:00:00.000Z, track=248703, color=[GREY], comment=До звонка будильника осталось 4 часа..., createdAt=2025-02-07T13:05:16.236Z, updatedAt=2025-02-07T13:05:16.236Z, status=0}, {id=419500, courierId=null, firstName=Petr, lastName=Petrov, address=Mars, 12 lunka, metroStation=Marsianskaya, phone=+1234567890, rentTime=3, deliveryDate=2125-02-10T00:00:00.000Z, track=633002, color=[GREY], comment=Bez Ananasov, createdAt=2025-02-08T10:09:19.533Z, updatedAt=2025-02-08T10:09:19.533Z, status=0}, {id=419501, courierId=null, firstName=Petr, lastName=Petrov, address=Mars, 12 lunka, metroStation=Marsianskaya, phone=+1234567890, rentTime=3, deliveryDate=2125-02-10T00:00:00.000Z, track=66854, color=[BLACK, GREY], comment=Bez Ananasov, createdAt=2025-02-08T10:09:19.821Z, updatedAt=2025-02-08T10:09:19.821Z, status=0}]>\n",
+      "children" : [ {
+        "name" : "testGetOrderList",
+        "uid" : "ad847ec482904048",
+        "parentUid" : "5cc92917865c60d937062ff480470d0b",
+        "status" : "failed",
+        "time" : {
+          "start" : 1771873923784,
+          "stop" : 1771873935821,
+          "duration" : 12037
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5cc92917865c60d937062ff480470d0b"
+    }, {
+      "name" : "1 expectation failed.\nJSON path message doesn't match.\nExpected: Учетная запись не найдена\n  Actual: Not Found.\n",
+      "children" : [ {
+        "name" : "testLoginCourierWithIncorrectCredentialsError",
+        "uid" : "7103e8dd153b7b7d",
+        "parentUid" : "80a0cab380ee3c27912b1d6086639c14",
+        "status" : "failed",
+        "time" : {
+          "start" : 1771873935835,
+          "stop" : 1771873936128,
+          "duration" : 293
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testLoginNonExistingUserError",
+        "uid" : "3909b4ade8d7822a",
+        "parentUid" : "80a0cab380ee3c27912b1d6086639c14",
+        "status" : "failed",
+        "time" : {
+          "start" : 1771873936360,
+          "stop" : 1771873936560,
+          "duration" : 200
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "80a0cab380ee3c27912b1d6086639c14"
+    }, {
+      "name" : "1 expectation failed.\nExpected status code <400> but was <404>.\n",
+      "children" : [ {
+        "name" : "testLoginCourierWithMissingFieldsError",
+        "uid" : "53a7019e205b9a7",
+        "parentUid" : "b931fa9792f83957c43bec6dbef5410d",
+        "status" : "failed",
+        "time" : {
+          "start" : 1771873936143,
+          "stop" : 1771873936341,
+          "duration" : 198
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b931fa9792f83957c43bec6dbef5410d"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "class java.lang.Integer cannot be cast to class java.lang.String (java.lang.Integer and java.lang.String are in module java.base of loader 'bootstrap')",
+      "children" : [ {
+        "name" : "testCreateOrderWithSingleColor[0]",
+        "uid" : "ecc88dace7c96f0d",
+        "parentUid" : "6ba5f6ca850e093fd7abf471f84990e0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1771873922255,
+          "stop" : 1771873922761,
+          "duration" : 506
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testCreateOrderWithSingleColor[1]",
+        "uid" : "96e26bf59fafb45c",
+        "parentUid" : "6ba5f6ca850e093fd7abf471f84990e0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1771873922765,
+          "stop" : 1771873923095,
+          "duration" : 330
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testCreateOrderWithSingleColor[2]",
+        "uid" : "e126b642e08e6e29",
+        "parentUid" : "6ba5f6ca850e093fd7abf471f84990e0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1771873923100,
+          "stop" : 1771873923383,
+          "duration" : 283
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testCreateOrderWithSingleColor[3]",
+        "uid" : "5b9d1bb12136e299",
+        "parentUid" : "6ba5f6ca850e093fd7abf471f84990e0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1771873923391,
+          "stop" : 1771873923717,
+          "duration" : 326
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6ba5f6ca850e093fd7abf471f84990e0"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

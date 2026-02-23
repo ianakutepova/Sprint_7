@@ -1,0 +1,80 @@
+{
+  "uid" : "762b47f971b74a68",
+  "name" : "testCreateCourierWithMissingPasswordError",
+  "fullName" : "CreateCourierTest.testCreateCourierWithMissingPasswordError",
+  "historyId" : "c5531eb65cfed9b26c9b1e3c14188d90",
+  "time" : {
+    "start" : 1771873920942,
+    "stop" : 1771873921224,
+    "duration" : 282
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "CreateCourierWithMissingPassword",
+      "time" : {
+        "start" : 1771873920942,
+        "stop" : 1771873921224,
+        "duration" : 282
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : ""
+  }, {
+    "name" : "testClass",
+    "value" : "CreateCourierTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCreateCourierWithMissingPasswordError"
+  }, {
+    "name" : "suite",
+    "value" : "CreateCourierTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-9LV60BJ"
+  }, {
+    "name" : "thread",
+    "value" : "23780@DESKTOP-9LV60BJ.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit4"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "762b47f971b74a68.json",
+  "parameterValues" : [ ]
+}
