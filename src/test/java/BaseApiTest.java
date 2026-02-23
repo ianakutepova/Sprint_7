@@ -14,8 +14,5 @@ public class BaseApiTest {
 
     }
 
-    @After
-    public void cleanUp() {
-    }
 
 }

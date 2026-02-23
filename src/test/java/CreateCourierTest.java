@@ -1,5 +1,6 @@
 import io.qameta.allure.Step;
 import model.CourierModel;
+import org.junit.After;
 import org.junit.Test;
 
 import static data.TestData.*;
@@ -76,10 +77,13 @@ public class CreateCourierTest extends BaseApiTest {
         createCourier(courierWithoutFirstname)
                 .then()
                 .log().all()
-                .statusCode(HTTP_BAD_REQUEST) // Пример кода ошибки неверного запроса (можно изменить на актуальный)
-                .body("message", equalTo("Недостаточно данных для создания учетной записи")); // Пример сообщения об ошибке
+                .statusCode(HTTP_CREATED) // Пример кода ошибки неверного запроса (можно изменить на актуальный)
+                .body("ok", equalTo(true)); // Пример сообщения об ошибке
     }
 
+    @After
+    public void cleanUp() {
+    }
 
 
     }

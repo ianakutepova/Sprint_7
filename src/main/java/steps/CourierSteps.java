@@ -22,15 +22,14 @@ public class CourierSteps {
 
     }
 
-    public static final String COURIER_LOGIN = "/api/v1/courier/login";
 
-    public static Response loginCourier(CourierModel courierModel) {
+    public static Response loginCourier(String login, String password) {
         return given()
                 .log().all()
                 .contentType(ContentType.JSON)
-                .body(courierModel)
+                .body(String.format("{\"login\": \"%s\", \"password\": \"%s\"}", login, password))
                 .when()
-                .post(COURIER_LOGIN)
+                .post(CREATE_PATH + "login")
                 .then()
                 .extract().response();
 

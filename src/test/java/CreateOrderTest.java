@@ -2,6 +2,7 @@ import com.github.javafaker.Faker;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import model.OrderModel;
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -70,10 +71,14 @@ public class CreateOrderTest extends BaseApiTest {
         String track = response.jsonPath().get("track");
 
 
-        OrderCancellationSteps.cancelOrder(track)
+        OrderCancellationTest.cancelOrder(track)
                 .then()
                 .log().all()
                 .statusCode(200); // или другой ожидаемый статус
     }
+    @After
+    public void cleanUp() {
+    }
+
 }
 
