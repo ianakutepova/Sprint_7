@@ -15,6 +15,7 @@ import static steps.OrderSteps.createOrder;
 
 @RunWith(Parameterized.class)
 public class CreateOrderTest extends BaseApiTest {
+    private String track;
 
     @Parameterized.Parameter
     public String[] color; // Изменили тип на String[]
@@ -29,7 +30,6 @@ public class CreateOrderTest extends BaseApiTest {
         });
     }
 
-    @Step("CreateOrderWithSingleColor")
     @Test
     public void testCreateOrderWithSingleColor() {
         Faker faker = new Faker();
@@ -74,11 +74,12 @@ public class CreateOrderTest extends BaseApiTest {
         OrderCancellationTest.cancelOrder(track)
                 .then()
                 .log().all()
-                .statusCode(200); // или другой ожидаемый статус
+                .statusCode(200);
     }
     @After
     public void cleanUp() {
+        if (track != null) {
+            OrderCancellationTest.cancelOrder(track);
+        }
     }
-
 }
-

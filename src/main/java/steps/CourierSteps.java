@@ -1,10 +1,14 @@
 package steps;
 
+import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import model.CourierModel;
+import model.LoginCourierModel;
+import model.LoginModel;
 
 import static io.restassured.RestAssured.given;
+import static java.net.HttpURLConnection.HTTP_OK;
 
 public class CourierSteps {
 
@@ -23,13 +27,24 @@ public class CourierSteps {
     }
 
 
-    public static Response loginCourier(String login, String password) {
+    public static Response loginCourier(LoginCourierModel loginModel) {
         return given()
                 .log().all()
                 .contentType(ContentType.JSON)
-                .body(String.format("{\"login\": \"%s\", \"password\": \"%s\"}", login, password))
+                .body(loginModel)
                 .when()
                 .post(CREATE_PATH + "login")
+                .then()
+                .extract().response();
+
+    }
+
+    public static void deleteCourier(String id) {
+        String deleteCourierPath = (CREATE_PATH + id);
+        Response response = RestAssured.given()
+                .log().all()
+                .when()
+                .delete(deleteCourierPath)
                 .then()
                 .extract().response();
 

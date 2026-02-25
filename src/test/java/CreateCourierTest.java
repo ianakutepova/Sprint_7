@@ -7,13 +7,13 @@ import static data.TestData.*;
 import static java.net.HttpURLConnection.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static steps.CourierSteps.createCourier;
+import static steps.CourierSteps.deleteCourier;
 
 public class CreateCourierTest extends BaseApiTest {
     private static String courierLogin;
     private static String courierPassword;
     private static String courierFirstName;
 
-        @Step("CreateCourierSuccess")
         @Test
         public void testCreateCourierSuccess() {
 
@@ -28,7 +28,6 @@ public class CreateCourierTest extends BaseApiTest {
                 .body("ok", equalTo(true));
         }
 
-    @Step("CreateDuplicateCourier")
     @Test
     public void testCreateDuplicateCourierError() {
         CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
@@ -42,7 +41,6 @@ public class CreateCourierTest extends BaseApiTest {
                 .body("message", equalTo("Этот логин уже используется. Попробуйте другой.")); // Пример сообщения об ошибке
     }
 
-    @Step("CreateCourierWithMissingLogin")
     @Test
     public void testCreateCourierWithMissingLoginError() {
 
@@ -55,7 +53,6 @@ public class CreateCourierTest extends BaseApiTest {
                 .body("message", equalTo("Недостаточно данных для создания учетной записи")); // Пример сообщения об ошибке
     }
 
-    @Step("CreateCourierWithMissingPassword")
     @Test
     public void testCreateCourierWithMissingPasswordError() {
 
@@ -68,7 +65,6 @@ public class CreateCourierTest extends BaseApiTest {
                 .body("message", equalTo("Недостаточно данных для создания учетной записи")); // Пример сообщения об ошибке
     }
 
-    @Step("CreateCourierWithMissingFirstname")
     @Test
     public void testCreateCourierWithMissingFirstnameError() {
 
@@ -83,8 +79,7 @@ public class CreateCourierTest extends BaseApiTest {
 
     @After
     public void cleanUp() {
+        deleteCourier(courierLogin);
     }
-
-
-    }
+}
 

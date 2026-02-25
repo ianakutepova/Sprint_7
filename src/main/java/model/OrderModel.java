@@ -31,6 +31,6 @@ public class OrderModel {
     @JsonProperty("color")
     private String[] color;
 
-    public OrderModel(String firstName, String lastName, String address, String metroStation, String phone, int rentTime, String deliveryDate, String comment, Object color) {
+    public OrderModel(String firstName, String lastName, String address, String metroStation, String phone, int rentTime, String deliveryDate, String comment, String[] color) {
     }
 }

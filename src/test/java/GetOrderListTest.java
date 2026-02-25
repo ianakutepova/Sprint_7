@@ -7,7 +7,6 @@ import static steps.OrderSteps.ORDER_PATH;
 
 public class GetOrderListTest extends BaseApiTest {
 
-    @Step("GetOrderList")
     @Test
     public void testGetOrderList() {
         given()
