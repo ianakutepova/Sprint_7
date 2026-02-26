@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import steps.OrderSteps;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -18,19 +19,20 @@ public class CreateOrderTest extends BaseApiTest {
     private String track;
 
     @Parameterized.Parameter
-    public String[] color; // Изменили тип на String[]
+    public String[] color;
 
     @Parameterized.Parameters
     public static Collection<Object[]> dataForColor() {
         return Arrays.asList(new Object[][]{
                 {new String[]{"BLACK"}},
                 {new String[]{"GREY"}},
-                {new String[]{}}, // для случая без цвета
-                {new String[]{"BLACK", "GREY"}} // для случая с двумя цветами
+                {new String[]{}},
+                {new String[]{"BLACK", "GREY"}}
         });
     }
 
     @Test
+    @Step("Create order with single color")
     public void testCreateOrderWithSingleColor() {
         Faker faker = new Faker();
 
@@ -68,10 +70,10 @@ public class CreateOrderTest extends BaseApiTest {
                 .body("track", notNullValue())
                 .extract().response();
 
-        String track = response.jsonPath().get("track");
+        this.track = response.jsonPath().get("track").toString();
+        System.out.println("Track number: " + this.track);
 
-
-        OrderCancellationTest.cancelOrder(track)
+        OrderSteps.cancelOrder(this.track)
                 .then()
                 .log().all()
                 .statusCode(200);
@@ -79,7 +81,7 @@ public class CreateOrderTest extends BaseApiTest {
     @After
     public void cleanUp() {
         if (track != null) {
-            OrderCancellationTest.cancelOrder(track);
+            OrderSteps.cancelOrder(track);
         }
     }
 }

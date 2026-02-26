@@ -1,5 +1,4 @@
 import io.restassured.RestAssured;
-import org.junit.After;
 import org.junit.BeforeClass;
 
 import static data.TestData.BASE_URI;

@@ -14,21 +14,23 @@ public class CreateCourierTest extends BaseApiTest {
     private static String courierPassword;
     private static String courierFirstName;
 
-        @Test
-        public void testCreateCourierSuccess() {
+    @Test
+    @Step("Create courier successfully")
+    public void testCreateCourierSuccess() {
 
-            CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
+        CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
 
-            System.out.println(courier);
+        System.out.println(courier);
 
         createCourier(courier)
                 .then()
                 .log().all()
                 .statusCode(HTTP_CREATED)
                 .body("ok", equalTo(true));
-        }
+    }
 
     @Test
+    @Step("Test creating a duplicate courier")
     public void testCreateDuplicateCourierError() {
         CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
         createCourier(courier);
@@ -42,6 +44,7 @@ public class CreateCourierTest extends BaseApiTest {
     }
 
     @Test
+    @Step("Test create courier with missing login")
     public void testCreateCourierWithMissingLoginError() {
 
         CourierModel courierWithoutLogin = new CourierModel(null, PASSWORD, FIRSTNAME);
@@ -54,6 +57,7 @@ public class CreateCourierTest extends BaseApiTest {
     }
 
     @Test
+    @Step("Test create courier with missing password")
     public void testCreateCourierWithMissingPasswordError() {
 
         CourierModel courierWithoutPassword = new CourierModel(LOGIN, null, FIRSTNAME);
@@ -66,6 +70,7 @@ public class CreateCourierTest extends BaseApiTest {
     }
 
     @Test
+    @Step("Test create courier with missing first name")
     public void testCreateCourierWithMissingFirstnameError() {
 
         CourierModel courierWithoutFirstname = new CourierModel(LOGIN, PASSWORD, null);

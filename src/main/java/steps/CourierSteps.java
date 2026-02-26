@@ -5,10 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import model.CourierModel;
 import model.LoginCourierModel;
-import model.LoginModel;
 
 import static io.restassured.RestAssured.given;
-import static java.net.HttpURLConnection.HTTP_OK;
 
 public class CourierSteps {
 

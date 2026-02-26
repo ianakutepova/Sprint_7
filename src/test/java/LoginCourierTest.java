@@ -1,6 +1,5 @@
 import data.TestData;
 import io.qameta.allure.Step;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import model.CourierModel;
 import model.LoginCourierModel;
@@ -9,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import steps.CourierSteps;
 
-import static io.restassured.RestAssured.given;
 import static java.net.HttpURLConnection.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static data.TestData.*;
@@ -21,17 +19,20 @@ public class LoginCourierTest extends BaseApiTest {
     private static String courierFirstName;
 
     @Before
+    @Step("Setup a new courier")
     public void setUp() {
         CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
         createCourier(courier);
     }
 
     @After
+    @Step("Delete the courier after test")
     public void tearDown() {
         deleteCourier(courierLogin);
     }
 
     @Test
+    @Step("Test successful courier login")
     public void testLoginCourierSuccess() {
         System.out.println("Trying to log in with login: " + LOGIN + ", password: " + PASSWORD);
         LoginCourierModel loginModel = new LoginCourierModel(LOGIN, PASSWORD);
@@ -44,6 +45,7 @@ public class LoginCourierTest extends BaseApiTest {
 
 
     @Test
+    @Step("Test login with missing fields")
     public void testLoginCourierWithMissingFieldsError() {
         LoginCourierModel missingLoginModel = new LoginCourierModel(null, PASSWORD);
         Response response = CourierSteps.loginCourier(missingLoginModel);
@@ -63,6 +65,7 @@ public class LoginCourierTest extends BaseApiTest {
     }
 
     @Test
+    @Step("Test login with incorrect credentials")
     public void testLoginCourierWithIncorrectCredentialsError() {
         LoginCourierModel incorrectCredentialsModel = new LoginCourierModel(INCORRECT_LOGIN, INCORRECT_PASSWORD);
         Response response = CourierSteps.loginCourier(incorrectCredentialsModel);
@@ -74,6 +77,7 @@ public class LoginCourierTest extends BaseApiTest {
     }
 
     @Test
+    @Step("Test login for non-existing user")
     public void testLoginNonExistingUserError() {
         String randomLogin = TestData.NON_EXISTING_LOGIN;
         String randomPassword = TestData.NON_EXISTING_PASSWORD;
