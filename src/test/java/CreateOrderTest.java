@@ -1,5 +1,6 @@
 import com.github.javafaker.Faker;
-import io.qameta.allure.Step;
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import model.OrderModel;
 import org.junit.After;
@@ -32,7 +33,8 @@ public class CreateOrderTest extends BaseApiTest {
     }
 
     @Test
-    @Step("Create order with single color")
+    @DisplayName("Create order with single color")
+    @Description("Creates an order with a single color")
     public void testCreateOrderWithSingleColor() {
         Faker faker = new Faker();
 

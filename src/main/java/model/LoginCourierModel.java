@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 
 public class LoginCourierModel {
-    private String courierLogin;
-    private String courierPassword;
+    private String login;
+    private String password;
 
 }

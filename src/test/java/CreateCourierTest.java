@@ -1,4 +1,5 @@
-import io.qameta.allure.Step;
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import model.CourierModel;
 import org.junit.After;
 import org.junit.Test;
@@ -15,7 +16,8 @@ public class CreateCourierTest extends BaseApiTest {
     private static String courierFirstName;
 
     @Test
-    @Step("Create courier successfully")
+    @DisplayName("Create courier successfully")
+    @Description("Checks the successful creation of a courier with valid credentials")
     public void testCreateCourierSuccess() {
 
         CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
@@ -30,7 +32,8 @@ public class CreateCourierTest extends BaseApiTest {
     }
 
     @Test
-    @Step("Test creating a duplicate courier")
+    @DisplayName("Test creating a duplicate courier")
+    @Description("Checks error when create a duplicate courier with the same login")
     public void testCreateDuplicateCourierError() {
         CourierModel courier = new CourierModel(LOGIN, PASSWORD, FIRSTNAME);
         createCourier(courier);
@@ -44,7 +47,8 @@ public class CreateCourierTest extends BaseApiTest {
     }
 
     @Test
-    @Step("Test create courier with missing login")
+    @DisplayName("Test create courier with missing login")
+    @Description("Checks error when create a courier without login")
     public void testCreateCourierWithMissingLoginError() {
 
         CourierModel courierWithoutLogin = new CourierModel(null, PASSWORD, FIRSTNAME);
@@ -57,7 +61,8 @@ public class CreateCourierTest extends BaseApiTest {
     }
 
     @Test
-    @Step("Test create courier with missing password")
+    @DisplayName("Test create courier with missing password")
+    @Description("Checks error when create a courier without password")
     public void testCreateCourierWithMissingPasswordError() {
 
         CourierModel courierWithoutPassword = new CourierModel(LOGIN, null, FIRSTNAME);
@@ -70,7 +75,8 @@ public class CreateCourierTest extends BaseApiTest {
     }
 
     @Test
-    @Step("Test create courier with missing first name")
+    @DisplayName("Test create courier with missing first name")
+    @Description("Checks error when create a courier without first name")
     public void testCreateCourierWithMissingFirstnameError() {
 
         CourierModel courierWithoutFirstname = new CourierModel(LOGIN, PASSWORD, null);

@@ -1,19 +1,19 @@
-import io.qameta.allure.Step;
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
+import io.restassured.response.Response;
 import org.junit.Test;
+import steps.OrderSteps;
 
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.hasKey;
-import static steps.OrderSteps.ORDER_PATH;
 
 public class GetOrderListTest extends BaseApiTest {
 
     @Test
-    @Step("Get order list")
+    @DisplayName("Get order list")
+    @Description("Tests the retrieval of the order list")
     public void testGetOrderList() {
-        given()
-                .when()
-                .get(ORDER_PATH)
-                .then()
+        Response response = OrderSteps.getOrderList();
+        response.then()
                 .log().all()
                 .statusCode(200)
                 .body("orders", hasKey("id"))
